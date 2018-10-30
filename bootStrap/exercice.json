@@ -1,0 +1,62 @@
+{
+    "identifiant": "No Game No Life - Volume 1",
+    "Nom": "No game no life",
+    "type": "Mangas",
+    "empruntesPar": {
+        "utilisateur": {
+            "identifiantUtilisateur": "1",
+            "nomUtilisateur": "robert",
+            "prenomUtilisateur": "gerard"
+        },
+        "dateEmprunt": "10/10/2018",
+        "dateRendu": "",
+    }
+},
+{
+    "identifiant": "No Game No Life - Volume 2",
+    "Nom": "No game no life",
+    "type": "Mangas",
+    "empruntesPar": {
+        "utilisateur": {
+           "identifiantUtilisateur": "2",
+            "nomUtilisateur": "bidon",
+            "prenomUtilisateur": "je suis"
+        },
+        "dateEmprunt": "01/10/2018",
+        "dateRendu": "9/10/2018",
+    }
+},
+{
+    "identifiant": "No Game No Life - Volume 3",
+    "Nom": "No game no life",
+    "type": "Mangas",
+    "empruntesPar": {
+        "utilisateur": {
+            "identifiantUtilisateur": "3",
+            "nomUtilisateur": "boom",
+            "prenomUtilisateur": "josianna"
+        },
+        "dateEmprunt": "10/10/2018",
+        "dateRendu": "",
+    }
+},
+{
+    "identifiant": "Guilty-crown - Volume 1",
+    "Nom": "Guilty-crown",
+    "type": "Mangas",
+    "empruntesPar": {}
+},
+{
+    "identifiant": "Death note - Volume 1",
+    "Nom": "Death note",
+    "type": "Mangas",
+    "empruntesPar": {
+        "utilisateur": {
+                "identifiantUtilisateur": "3",
+                    "nomUtilisateur": "boom",
+                    "prenomUtilisateur": "josianna",
+            },
+        "dateEmprunt": "10/10/2018",
+        "dateRendu": "",
+    }
+}

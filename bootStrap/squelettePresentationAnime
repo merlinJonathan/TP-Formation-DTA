@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Gestion d'une médiathèque</title>
+        <link rel="stylesheet" href="../../main.css"/>
+        <link rel="stylesheet" href="../../presentation.css"/>
+    </head>
+    
+    <body>
+        <nav class="menu">
+            <a href="../../index.html">Accueil</a>
+            <a href="./adherent/adherent.html">Gestions des adhérents</a>
+            <a href="">Liste des médias</a>
+            <a href="">Connexion</a>
+        </nav>
+        
+        <h1 class="titreDePage">Titre de l'anime</h1>
+        <div class="presentation">
+            <img src="./jaquette.png" alt="Erreur de chargement de l'image"/>
+            <iframe  src=""></iframe>
+        </div>
+        <div class="encadrement">
+            <table>
+                <caption>Informations sur l'oeuvre</caption>
+                <tr>
+                    <td>Date de parution</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Nombres d'épisodes</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Synopsis</td>
+                    <td>
+                        <p></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Catégories</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Auteur</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Studio</td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        
+    </body>
+    
+    <footer>
+        <div class="encadrement">
+            <h1>Gestionnaire de médiathèque</h1>
+            <a href="../../index.html">Retour à la page d'accueil</a>
+        </div>
+    </footer>
+</html>

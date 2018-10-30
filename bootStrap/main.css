@@ -1,0 +1,129 @@
+body {
+    color : white;
+    text-align: center;
+    background-image: url("./background.png");
+}
+
+.presentationMedia {
+    text-align: center;
+    padding-left: 0.4%;
+}
+
+.tendances {
+    margin-top: 30px;
+}
+
+textarea{
+    overflow: hidden;
+    width: 70%;
+    color : black;
+}
+
+.presentationMediaAGauche {
+    text-align: left;
+}
+
+table {
+    margin-top: 30px;
+    width: 100%;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+
+tr:nth-child(odd) {
+    background-color: darkslategrey ;
+}
+
+th {
+    text-align: center;
+    background-color: black;
+}
+
+caption {
+    font-size: 30px;
+    text-align: center;
+    color:white;
+}
+
+table tr:first-child td:first-child{
+    border-top-left-radius: 20px;
+}
+
+table tr:first-child td:last-child{
+    border-top-right-radius: 20px;
+}
+
+table tr:last-child td:first-child{
+    border-top-left-radius: 20px;
+}
+
+table tr:last-child td:last-child{
+    border-top-right-radius: 20px;
+}
+
+.titreDePage {
+    margin-top: 60px;
+}
+
+
+.menu {
+    position: fixed;
+    width: 100%;
+    height: 35px;
+    top : 0px;
+    left: 0px;
+    font-size: 30px;
+    z-index: 1;
+    
+    background-color: darkslategray;
+    display: flex;
+    justify-content: space-around;
+}
+
+.titreMenu a{
+    color: #c9c9c9;
+}
+
+h2 {
+    text-align: center;
+}
+
+@media (max-width: 767px){   
+    h2 {
+        font-size: 15px;
+    }
+    .menu {
+        visibility: hidden;
+    }
+}
+@media (min-width: 768px, max-width: 991px){  
+    h2 {
+        font-size: 20px;
+    }
+}
+@media (min-width: 992px, max-width: 1199px){    
+    h2 {
+        font-size: 25px;
+    }
+}
+@media (min-width: 1200px){
+    h2 {
+        font-size: 30px;
+    }
+}
+
+
+
+footer {
+    border-radius: 20px;
+    background-color: darkslategrey;
+    border: 3px solid black;
+    width: 90%;
+    margin: 20px auto;
+}
+
+footer a{
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}

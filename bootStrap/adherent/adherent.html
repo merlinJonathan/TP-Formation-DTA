@@ -1,0 +1,120 @@
+<! DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+        <title id="titre">Ajout d'un adhérent</title>
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        <link rel="stylesheet" href="../main.css">
+	</head>
+	<body>
+        <h1>Formulaire d'ajout d'un adhérent</h1>
+        <form class="container">
+            <div class="row">
+                <div class="form-group col-xs-12">
+                    <label for="prénom">Prénom : </label>
+                    <input class="form-control" name="prénom" id="prénom" type="text" value="" autocomplete="off" required placeholder="Entrez votre email" autofocus/>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="form-group col-xs-12">
+                    <label for="nom">Nom : </label>
+                    <input class="form-control" name="nom" id="nom" type="text" value="" autocomplete="off" pattern="[A-Z]+" required/>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="form-group col-xs-12">
+                    <label for="dateDeNaissance">Date de naissance : </label>
+                    <input class="form-control" name="dateDeNaissance" id="dateDeNaissance" type="date" value=""/>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="form-group col-xs-12">
+                    <label for="email">Adresse email : </label>
+                    <input class="form-control" name="email" id="email" type="email" value="" required/>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="form-group col-xs-12">
+                    <label for="tel">Numéro de téléphone : </label>
+                    <input class="form-control" name="tel" id="tel" type="tel" value="" pattern="[0-9]{10}" required/>
+                </div>
+            </div>
+            
+            <label>Préférence de contact</label>
+            <div class="row">
+                <div class="radio col-xs-12">
+                    <label class="radio-inline" for="preferenceMail">
+                        <input name="preferenceContact" id="preferenceMail" type="radio" value="mail" checked/>Email
+                    </label>
+                    
+                    <label class="radio-inline" for="preferenceTel">
+                        <input name="preferenceContact" id="preferenceTel" type="radio" value="tel"/>Tel
+                    </label>
+                </div>
+            </div>
+            
+            
+            <label>Souscrit aux services</label>
+            <div class="row">
+                <div class="form-group col-xs-12">
+                    <div class="checkbox-inline">
+                        <label for="animations">
+                            <input name="animations" id="animations" type="checkbox" value="false">Animation
+                        </label>
+                    </div>
+                    <div class="checkbox-inline">
+                        <label for="spectacles">
+                            <input name="services" id="spectacles" type="checkbox" value="false">Spectacles
+                        </label>
+                    </div>
+                    <div class="checkbox-inline">
+                        <label for="empruntIllimite">
+                            <input name="services" id="empruntIllimite" type="checkbox" value="false">
+                            Emprunts illimités
+                        </label>
+                    </div>           
+                </div>
+            </div>
+            
+            
+            
+            <label for="codeParrain">Code du parrain : </label>
+            <input name="codeParrain" id="codeParrain" type="text" value=""><br/><br/>
+            
+            <label for="choixPays">Pays : </label>
+            <select name="choixPays">
+                <optgroup label="Européen">
+                    <option value="france" >France</option>
+                    <option value="espagne" >Espagne</option>
+                    <option value="italie" >Italie</option>
+                    <option value="Angleterre" >Angleterre</option>
+                </optgroup>
+                <optgroup label="Asiatique">
+                    <option value="chine" >Chine</option>
+                    <option value="corée" >Corée</option>
+                    <option value="vietnam" >Vietnam</option>
+                    <option value="thailand" >Thailand</option>
+                </optgroup>
+            </select><br/><br/>
+        
+            <label>VIP : </label><br/>
+            <label for="vipNon">Non</label>
+            <input name="vip" id="vipNon" type="radio" value="Non" checked>
+            <label for="vipOui">Oui</label>
+            <input name="vip" id="vipOui" type="radio" value="Oui"><br/><br/>
+            
+            <input name="submit" id="submit" type=submit><br/>
+        </form>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	</body>
+    <footer>
+        <span>Gestion d'une médiathèque</span>
+        <a href="../index.html">Retour à la page d'accueil</a>
+    </footer>
+</html>

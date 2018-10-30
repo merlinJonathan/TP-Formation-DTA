@@ -1,0 +1,25 @@
+-------------------------------------------------------------------------------
+Test set: fr.dta.spring.boot.tests.UserControllerTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 4, Skipped: 0, Time elapsed: 3.356 s <<< FAILURE! - in fr.dta.spring.boot.tests.UserControllerTest
+creerUserGetTestF(fr.dta.spring.boot.tests.UserControllerTest)  Time elapsed: 0.394 s  <<< ERROR!
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter': Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]: Constructor threw exception; nested exception is java.lang.NoClassDefFoundError: org/springframework/core/log/LogDelegateFactory
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]: Constructor threw exception; nested exception is java.lang.NoClassDefFoundError: org/springframework/core/log/LogDelegateFactory
+Caused by: java.lang.NoClassDefFoundError: org/springframework/core/log/LogDelegateFactory
+Caused by: java.lang.ClassNotFoundException: org.springframework.core.log.LogDelegateFactory
+
+creerUserGetTestT(fr.dta.spring.boot.tests.UserControllerTest)  Time elapsed: 0.399 s  <<< ERROR!
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter': Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]: Constructor threw exception; nested exception is java.lang.NoClassDefFoundError: org/springframework/core/log/LogDelegateFactory
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]: Constructor threw exception; nested exception is java.lang.NoClassDefFoundError: org/springframework/core/log/LogDelegateFactory
+Caused by: java.lang.NoClassDefFoundError: org/springframework/core/log/LogDelegateFactory
+
+creerUserPostTestF(fr.dta.spring.boot.tests.UserControllerTest)  Time elapsed: 0.385 s  <<< ERROR!
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter': Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]: Constructor threw exception; nested exception is java.lang.NoClassDefFoundError: org/springframework/core/log/LogDelegateFactory
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]: Constructor threw exception; nested exception is java.lang.NoClassDefFoundError: org/springframework/core/log/LogDelegateFactory
+Caused by: java.lang.NoClassDefFoundError: org/springframework/core/log/LogDelegateFactory
+
+creerUserPostTestT(fr.dta.spring.boot.tests.UserControllerTest)  Time elapsed: 0.367 s  <<< ERROR!
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter': Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]: Constructor threw exception; nested exception is java.lang.NoClassDefFoundError: org/springframework/core/log/LogDelegateFactory
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]: Constructor threw exception; nested exception is java.lang.NoClassDefFoundError: org/springframework/core/log/LogDelegateFactory
+Caused by: java.lang.NoClassDefFoundError: org/springframework/core/log/LogDelegateFactory
+

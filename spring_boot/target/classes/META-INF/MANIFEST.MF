@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Implementation-Title: spring.boot
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: formation
+Implementation-Vendor-Id: fr.dta
+Build-Jdk: 1.8.0_181
+Implementation-URL: http://maven.apache.org
+Created-By: Maven Integration for Eclipse
+
