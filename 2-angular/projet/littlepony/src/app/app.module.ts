@@ -9,20 +9,22 @@ import { RaceDetailComponent } from './race-detail/race-detail.component';
 import { RacesComponent } from './races/races.component';
 import { RouterModule, Routes, Router} from '@angular/router';
 import { PonyFormComponent } from './pony-form/pony-form.component';
-import { Form, FormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { RaceFormComponent } from './race-form/race-form.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {AccordionModule} from 'primeng/accordion';     //accordion and accordion tab
-
+import { ReactiveFormsModule } from '@angular/forms';
 import {PickListModule} from 'primeng/picklist';
+import { PonyReactiveFormComponent } from './pony-reactive-form/pony-reactive-form.component';
+import { RaceReactiveFormComponent } from './race-reactive-form/race-reactive-form.component';
 
 const route: Routes = 
 [
   {path: '', component: RacesComponent},
   {path: 'Ponies', component: PoniesComponent},
   {path: 'Races', component: RacesComponent},
-  {path: 'addPonies', component: PonyFormComponent},
-  {path: 'addRace', component: RaceFormComponent},
+  {path: 'addPonies', component: PonyReactiveFormComponent},
+  {path: 'addRace', component: RaceReactiveFormComponent},
 ];
 
 
@@ -34,7 +36,9 @@ const route: Routes =
     RaceDetailComponent,
     RacesComponent,
     PonyFormComponent,
-    RaceFormComponent
+    RaceFormComponent,
+    PonyReactiveFormComponent,
+    RaceReactiveFormComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +47,8 @@ const route: Routes =
     FormsModule, 
     NgbModule, 
     AccordionModule,
-    PickListModule
+    PickListModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

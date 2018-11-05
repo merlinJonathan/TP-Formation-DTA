@@ -32,8 +32,6 @@ export class RaceFormComponent implements OnInit {
   onSubmit()
   {
     this.dateModel.month -= 1; // pour corriger un bug où ca prenait le mois suivant
-    
-    console.log(getLocaleDateFormat('en-GB', 3));
 
     this.model.date = new Date(this.dateModel.year, this.dateModel.month, this.dateModel.day);    
     this.service.addRace(this.model);
