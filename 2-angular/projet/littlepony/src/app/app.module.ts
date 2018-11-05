@@ -11,6 +11,10 @@ import { RouterModule, Routes, Router} from '@angular/router';
 import { PonyFormComponent } from './pony-form/pony-form.component';
 import { Form, FormsModule } from '@angular/forms';
 import { RaceFormComponent } from './race-form/race-form.component';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {AccordionModule} from 'primeng/accordion';     //accordion and accordion tab
+
+import {PickListModule} from 'primeng/picklist';
 
 const route: Routes = 
 [
@@ -36,7 +40,10 @@ const route: Routes =
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(route),
-    FormsModule
+    FormsModule, 
+    NgbModule, 
+    AccordionModule,
+    PickListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

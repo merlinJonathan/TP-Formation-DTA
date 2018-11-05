@@ -1,11 +1,15 @@
 <h1>Entrer une nouvelle course</h1>
 <form (ngSubmit) = "onSubmit()">
   Lieu <input type='text' id='Lieu' name='Lieu' required [(ngModel)] = "model.location" /><br>
-  Date <input type='date' id='date' name='date' required [(ngModel)] = 'model.date' /><br>
-  <p *ngFor="let p of participants" >
-    <label >{{p.nom}}</label>
-    <input type='checkbox' id='p.id' name='p.nom' [(ngModel)] = 'ponySelected[p.id]' /><br>
-  </p>
+  Date <ngb-datepicker #dp [(ngModel)]="dateModel" [ngModelOptions]="{standalone: true}"></ngb-datepicker><br>
+
+  <p-pickList sourceHeader="Disponibles" targetHeader="Sélectionnés" [source]="participants" [target]="model.ponies" [responsive]="true" dragdrop="true" dragdropScope="participants">
+    <ng-template let-pony pTemplate="item">
+        <div class="ui-helper-clearfix">
+            {{pony.nom}}
+        </div>
+    </ng-template>
+</p-pickList>
   
   <button type='submit'>Enregistrer</button>
 </form>
