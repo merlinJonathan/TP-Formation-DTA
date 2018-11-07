@@ -10,10 +10,10 @@ import { RaceService } from '../race.service';
 export class RacesComponent implements OnInit {
   races: Array<Race>;
   constructor(private service: RaceService) { 
-    this.service.getAllRaces().subscribe(r => this.races = r);
   }
 
   ngOnInit() {
+    this.service.getAllRaces().subscribe(r => this.races = r);
   }
 
 }

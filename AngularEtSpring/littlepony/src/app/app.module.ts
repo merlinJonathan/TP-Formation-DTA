@@ -18,13 +18,22 @@ import {PickListModule} from 'primeng/picklist';
 import { PonyReactiveFormComponent } from './pony-reactive-form/pony-reactive-form.component';
 import { RaceReactiveFormComponent } from './race-reactive-form/race-reactive-form.component';
 
+import {HttpClientModule} from '@angular/common/http';
+import { PonyComponent } from './pony/pony.component';
+import { RaceComponent } from './race/race.component';
+import { DeletePonyComponent } from './delete-pony/delete-pony.component';
+
 const route: Routes = 
 [
   {path: '', component: RacesComponent},
   {path: 'Ponies', component: PoniesComponent},
   {path: 'Races', component: RacesComponent},
   {path: 'addPonies', component: PonyReactiveFormComponent},
+  {path: 'updatePony/:id', component: PonyReactiveFormComponent},
+  {path: 'deletePony/:id', component: DeletePonyComponent},
   {path: 'addRace', component: RaceReactiveFormComponent},
+  {path: 'updateRace/:id', component: RaceReactiveFormComponent},
+  {path: ':id', component: PonyComponent},
 ];
 
 
@@ -38,7 +47,10 @@ const route: Routes =
     PonyFormComponent,
     RaceFormComponent,
     PonyReactiveFormComponent,
-    RaceReactiveFormComponent
+    RaceReactiveFormComponent,
+    PonyComponent,
+    RaceComponent,
+    DeletePonyComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +60,8 @@ const route: Routes =
     NgbModule, 
     AccordionModule,
     PickListModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

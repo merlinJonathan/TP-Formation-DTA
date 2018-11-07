@@ -4,11 +4,13 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,32 +19,39 @@ import fr.dta.AngularEtSpring.dao.RaceDAO;
 import fr.dta.AngularEtSpring.model.Race;
 
 @RestController
-@RequestMapping("/api/ponies")
+@RequestMapping("/api/races")
 public class RaceController {
 	@Autowired
 	RaceDAO racedao;
-	
+
+	@CrossOrigin(origins = "*")
 	@GetMapping("/")
     public List<Race> greeting() {
         return (List<Race>) racedao.findAll();
     }
+
+	@CrossOrigin(origins = "*")
 	@GetMapping("/{id}")
     public Optional<Race> greeting(@PathVariable long id) {
         return racedao.findById(id);
     }
 	
-	@PostMapping("/addPonies")
-    public void insertPony(@RequestParam(name="pony") Race race) {
+
+	@CrossOrigin(origins = "*")
+	@PostMapping("/addRace")
+    public void insertPony(@RequestBody Race race) {
 		racedao.save(race);
     }
-	
-	@PutMapping("/updatePony")
-    public void updatePony(@RequestParam(name="pony") Race race) {
+
+	@CrossOrigin(origins = "*")
+	@PutMapping("/updateRace")
+    public void updatePony(@RequestBody Race race) {
 		racedao.save(race);
     }
-	
-	@DeleteMapping("/deletePony")
-    public void deletePony(@RequestParam(name="pony") long id) {
+
+	@CrossOrigin(origins = "*")
+	@DeleteMapping("/deleteRace")
+    public void deletePony(@RequestBody long id) {
 		racedao.deleteById(id);
     }
 }

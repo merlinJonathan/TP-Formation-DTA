@@ -4,11 +4,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 
 @Entity
 public class Race extends IdEntity{
@@ -23,7 +19,8 @@ public class Race extends IdEntity{
 	private Date date;
 	
 	@Column
-	@OneToMany
+	@ManyToMany
+	@JoinTable(name="race_pony", joinColumns=@JoinColumn(name="race_id"), inverseJoinColumns=@JoinColumn(name="pony_id"))
 	private List<Pony> ponies;
 	
 	public Race()
