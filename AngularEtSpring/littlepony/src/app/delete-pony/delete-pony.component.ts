@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { PonyService } from '../pony.service';
+import { Pony } from '../pony';
 
 @Component({
   selector: 'app-delete-pony',

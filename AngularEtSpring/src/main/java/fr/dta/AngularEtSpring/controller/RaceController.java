@@ -44,14 +44,14 @@ public class RaceController {
     }
 
 	@CrossOrigin(origins = "*")
-	@PutMapping("/updateRace")
+	@PutMapping("/updateRace/{id}")
     public void updatePony(@RequestBody Race race) {
 		racedao.save(race);
     }
 
 	@CrossOrigin(origins = "*")
-	@DeleteMapping("/deleteRace")
-    public void deletePony(@RequestBody long id) {
+	@DeleteMapping("/deleteRace/{id}")
+    public void deletePony(@PathVariable long id) {
 		racedao.deleteById(id);
     }
 }

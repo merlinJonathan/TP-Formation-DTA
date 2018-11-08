@@ -22,6 +22,8 @@ import {HttpClientModule} from '@angular/common/http';
 import { PonyComponent } from './pony/pony.component';
 import { RaceComponent } from './race/race.component';
 import { DeletePonyComponent } from './delete-pony/delete-pony.component';
+import { DeleteRaceComponent } from './delete-race/delete-race.component';
+import { ConnexionFormComponent } from './connexion-form/connexion-form.component';
 
 const route: Routes = 
 [
@@ -30,7 +32,9 @@ const route: Routes =
   {path: 'Races', component: RacesComponent},
   {path: 'addPonies', component: PonyReactiveFormComponent},
   {path: 'updatePony/:id', component: PonyReactiveFormComponent},
+  {path: 'updateRace/:id', component: RaceReactiveFormComponent},
   {path: 'deletePony/:id', component: DeletePonyComponent},
+  {path: 'deleteRace/:id', component: DeleteRaceComponent},
   {path: 'addRace', component: RaceReactiveFormComponent},
   {path: 'updateRace/:id', component: RaceReactiveFormComponent},
   {path: ':id', component: PonyComponent},
@@ -50,7 +54,9 @@ const route: Routes =
     RaceReactiveFormComponent,
     PonyComponent,
     RaceComponent,
-    DeletePonyComponent
+    DeletePonyComponent,
+    DeleteRaceComponent,
+    ConnexionFormComponent
   ],
   imports: [
     BrowserModule,

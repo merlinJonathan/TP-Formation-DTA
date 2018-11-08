@@ -4,6 +4,8 @@ import { PONIES } from './ponies-mock';
 import { Observable, of } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { RaceService } from './race.service';
+import { Race } from './race';
 
 
 @Injectable({
@@ -16,7 +18,7 @@ export class PonyService { // equivalent a la DAO
     
   };
 
-  constructor(private http: HttpClient, private router: Router) { 
+  constructor(private http: HttpClient, private router: Router, private serviceRace: RaceService) { 
      
   }
 
@@ -41,6 +43,30 @@ export class PonyService { // equivalent a la DAO
 
   deletePony(id: number) : void
   {
-    this.http.delete(this.url + '/deletePony/' + id, this.httpOptions).subscribe(() => this.router.navigate(['/Ponies']));
+
+    this.serviceRace.getAllRaces().subscribe((courses) => {
+      let ponyParticipeCourse: boolean = false;
+
+      for(let r of courses)
+      {
+        for(let p of r.ponies)
+        {
+          if(p.id === id)
+          {
+            ponyParticipeCourse = true;
+          }
+        }
+      }
+
+      if(ponyParticipeCourse === false)
+      {
+        this.http.delete(this.url + '/deletePony/' + id, this.httpOptions).subscribe(() => this.router.navigate(['/Ponies']));
+      }
+      else
+      {
+        console.log('Le pony participe a une course et ne peut etre supprimé');
+        this.router.navigate(['/Ponies'])
+      }
+    });
   }
 }

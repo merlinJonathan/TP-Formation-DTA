@@ -1,5 +1,7 @@
 <ul>
   <li *ngFor="let r of races">
       <app-race-detail [race]="r" ></app-race-detail>
+      <a routerLink="/updateRace/{{r.id}}"> Modifier</a>
+      <a routerLink="/deleteRace/{{r.id}}"> Effacer</a>
   </li>
 </ul>

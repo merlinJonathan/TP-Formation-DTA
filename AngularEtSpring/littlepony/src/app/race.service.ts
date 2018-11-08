@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Race } from './race';
-import { RACES } from './race-mock';
-import { of, Observable } from 'rxjs';
+import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Router } from '@angular/router';
 
@@ -31,5 +30,16 @@ export class RaceService {
   addRace(r: Race)
   {
       this.http.post(this.url + '/addRace', r, this.httpOptions ).subscribe(() => this.router.navigate(['/']));
+  }
+
+  updateRace(r: Race)
+  {
+    this.http.put<Race>(this.url +'/updateRace/' + r.id ,r,  this.httpOptions).subscribe(() => this.router.navigate(['/']));
+  }
+
+  deleteRace(id: number)
+  {
+    this.http.delete<Race>(this.url +'/deleteRace/' + id,  this.httpOptions).subscribe(() => this.router.navigate(['/']));
+  
   }
 }

@@ -1,0 +1,10 @@
+<form *ngIf="!isConnected" [formGroup]='userForm' (ngSubmit) = "onSubmit()">
+  Nom <input type='text' id='name' name='name' formControlName='logging' /><br>
+  Mot de passe <input type='password' id='pass' name='pass' formControlName='pass' /><br>
+  <button type='submit'>Connexion</button>
+</form>
+
+<form *ngIf="isConnected" [formGroup]='userForm' (ngSubmit) = "onSubmit()">
+  <label>{{logging}}</label>>
+  <button type='submit'>Deconnexion</button>
+</form>
