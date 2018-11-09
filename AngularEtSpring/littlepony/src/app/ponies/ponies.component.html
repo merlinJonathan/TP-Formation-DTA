@@ -1,6 +1,7 @@
 <ul>
   <li *ngFor="let p of ponies">
-      <app-pony-detail [pony]="p"></app-pony-detail>
+      <!--<app-pony-detail [pony]="p"></app-pony-detail>-->
+      {{ p | ponyTransform }}
       <a routerLink="/{{p.id}}"> Afficher</a>
       <a routerLink="/updatePony/{{p.id}}"> Modifier</a>
       <a routerLink="/deletePony/{{p.id}}"> Effacer</a>

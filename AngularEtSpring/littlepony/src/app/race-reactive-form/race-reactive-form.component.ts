@@ -6,6 +6,7 @@ import { Pony } from '../pony';
 import { Race } from '../race';
 import { PonyService } from '../pony.service';
 import { PoniesComponent } from '../ponies/ponies.component';
+import { NgbDate} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-race-reactive-form',
@@ -18,7 +19,7 @@ export class RaceReactiveFormComponent implements OnInit {
 
   raceForm = this.fb.group({
     location: ['location', Validators.required],
-    date: [new Date()],
+    date: [new NgbDate(2018, 2, 1), Validators.required],
     ponies: Array<Pony>()
   });
 
@@ -44,7 +45,6 @@ export class RaceReactiveFormComponent implements OnInit {
 
       // recuperation des poneys de la course et du trie des poneys ny participants pas
       this.serviceRace.getRace(this.id).subscribe(r => {
-
 
         this.raceForm.setValue({
           location: r.location,
@@ -86,7 +86,7 @@ export class RaceReactiveFormComponent implements OnInit {
     }
     else
     {
-        let r = new Race(this.raceForm.value.location, this.raceForm.value.date);
+        let r = new Race(this.raceForm.value.location, new Date(this.raceForm.value.date.year, this.raceForm.value.date.month-1, this.raceForm.value.date.day));
         r.id = this.id;
         r.ponies = this.raceForm.value.ponies;
         this.serviceRace.updateRace(r);

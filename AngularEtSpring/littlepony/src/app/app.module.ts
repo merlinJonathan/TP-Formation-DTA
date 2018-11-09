@@ -24,6 +24,7 @@ import { RaceComponent } from './race/race.component';
 import { DeletePonyComponent } from './delete-pony/delete-pony.component';
 import { DeleteRaceComponent } from './delete-race/delete-race.component';
 import { ConnexionFormComponent } from './connexion-form/connexion-form.component';
+import { PonyTransformPipe } from './pony-transform.pipe';
 
 const route: Routes = 
 [
@@ -56,7 +57,8 @@ const route: Routes =
     RaceComponent,
     DeletePonyComponent,
     DeleteRaceComponent,
-    ConnexionFormComponent
+    ConnexionFormComponent,
+    PonyTransformPipe
   ],
   imports: [
     BrowserModule,
