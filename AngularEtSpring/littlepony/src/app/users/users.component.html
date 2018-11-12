@@ -1,0 +1,7 @@
+<ul>
+  <li *ngFor="let u of users">
+      {{u.id}} {{u.nom}}
+      <a routerLink="/updateUser/{{u.id}}"> Modifier</a>
+      <a routerLink="/deleteUser/{{u.id}}"> Effacer</a>
+  </li>
+</ul>

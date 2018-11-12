@@ -25,19 +25,25 @@ import { DeletePonyComponent } from './delete-pony/delete-pony.component';
 import { DeleteRaceComponent } from './delete-race/delete-race.component';
 import { ConnexionFormComponent } from './connexion-form/connexion-form.component';
 import { PonyTransformPipe } from './pony-transform.pipe';
+import { UserReactiveFormComponent } from './user-reactive-form/user-reactive-form.component';
+import { UsersComponent } from './users/users.component';
+import { DeleteUserComponent } from './delete-user/delete-user.component';
 
 const route: Routes = 
 [
   {path: '', component: RacesComponent},
   {path: 'Ponies', component: PoniesComponent},
   {path: 'Races', component: RacesComponent},
+  {path: 'users', component: UsersComponent},
   {path: 'addPonies', component: PonyReactiveFormComponent},
+  {path: 'addRace', component: RaceReactiveFormComponent},
+  {path: 'addUser', component: UserReactiveFormComponent},
   {path: 'updatePony/:id', component: PonyReactiveFormComponent},
   {path: 'updateRace/:id', component: RaceReactiveFormComponent},
+  {path: 'updateUser/:id', component: UserReactiveFormComponent},
   {path: 'deletePony/:id', component: DeletePonyComponent},
   {path: 'deleteRace/:id', component: DeleteRaceComponent},
-  {path: 'addRace', component: RaceReactiveFormComponent},
-  {path: 'updateRace/:id', component: RaceReactiveFormComponent},
+  {path: 'deleteUser/:id', component: DeleteUserComponent},
   {path: ':id', component: PonyComponent},
 ];
 
@@ -58,7 +64,10 @@ const route: Routes =
     DeletePonyComponent,
     DeleteRaceComponent,
     ConnexionFormComponent,
-    PonyTransformPipe
+    PonyTransformPipe,
+    UserReactiveFormComponent,
+    UsersComponent,
+    DeleteUserComponent
   ],
   imports: [
     BrowserModule,

@@ -1,9 +1,14 @@
 export class User {
-    logging: string;
-    pass: string = 'motdepasse';
+    id: number;
+    nom: string;
+    password: string = 'motdepasse';
+    role: string = 'ROLE_USER';
 
-    constructor(logging: string)
+    constructor(nom?: string, password?: string, role?: string)
     {
-        this.logging = logging;
+        this.id = 0;
+        this.nom = nom === undefined ? 'nom' : nom ;
+        this.password = password === undefined ? 'password' : password ;
+        this.role = role === undefined ? 'ROLE_USER' : role ;
     }
 }
